@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E507A6B7E5CDC69331CED31 /* Pods_RoundUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BFC31220E67DED5BA128120 /* Pods_RoundUp.framework */; };
 		C6ADD0D522D9E2C0009A02D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD0D422D9E2C0009A02D2 /* AppDelegate.swift */; };
 		C6ADD0DC22D9E2C1009A02D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6ADD0DB22D9E2C1009A02D2 /* Assets.xcassets */; };
 		C6ADD0DF22D9E2C1009A02D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6ADD0DD22D9E2C1009A02D2 /* LaunchScreen.storyboard */; };
+		E7663E53476FD30B3EC9082E /* Pods_RoundUpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92CF5719D4B48EACD8A3642C /* Pods_RoundUpTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +25,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06AAF78101039654511FF1A9 /* Pods-RoundUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoundUp.release.xcconfig"; path = "Target Support Files/Pods-RoundUp/Pods-RoundUp.release.xcconfig"; sourceTree = "<group>"; };
+		1BFC31220E67DED5BA128120 /* Pods_RoundUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoundUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25CD3B247099E9EE8EDBE43A /* Pods-RoundUpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoundUpTests.debug.xcconfig"; path = "Target Support Files/Pods-RoundUpTests/Pods-RoundUpTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3AFBCB0C0572767D4524FA67 /* Pods-RoundUpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoundUpTests.release.xcconfig"; path = "Target Support Files/Pods-RoundUpTests/Pods-RoundUpTests.release.xcconfig"; sourceTree = "<group>"; };
+		92CF5719D4B48EACD8A3642C /* Pods_RoundUpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoundUpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A94AB27306DA909976F98401 /* Pods-RoundUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoundUp.debug.xcconfig"; path = "Target Support Files/Pods-RoundUp/Pods-RoundUp.debug.xcconfig"; sourceTree = "<group>"; };
 		C6ADD0D122D9E2C0009A02D2 /* RoundUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoundUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6ADD0D422D9E2C0009A02D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6ADD0DB22D9E2C1009A02D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E507A6B7E5CDC69331CED31 /* Pods_RoundUp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,18 +53,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7663E53476FD30B3EC9082E /* Pods_RoundUpTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		628C5596EF4A2AB2FB515892 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1BFC31220E67DED5BA128120 /* Pods_RoundUp.framework */,
+				92CF5719D4B48EACD8A3642C /* Pods_RoundUpTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C6ADD0C822D9E2C0009A02D2 = {
 			isa = PBXGroup;
 			children = (
 				C6ADD0D322D9E2C0009A02D2 /* RoundUp */,
 				C6ADD0E822D9E2C1009A02D2 /* RoundUpTests */,
 				C6ADD0D222D9E2C0009A02D2 /* Products */,
+				F8B1DAACF9F7B2B607C33B8C /* Pods */,
+				628C5596EF4A2AB2FB515892 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +148,18 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
+		F8B1DAACF9F7B2B607C33B8C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A94AB27306DA909976F98401 /* Pods-RoundUp.debug.xcconfig */,
+				06AAF78101039654511FF1A9 /* Pods-RoundUp.release.xcconfig */,
+				25CD3B247099E9EE8EDBE43A /* Pods-RoundUpTests.debug.xcconfig */,
+				3AFBCB0C0572767D4524FA67 /* Pods-RoundUpTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +167,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6ADD0EE22D9E2C1009A02D2 /* Build configuration list for PBXNativeTarget "RoundUp" */;
 			buildPhases = (
+				A975AD82A6A44152A94D1651 /* [CP] Check Pods Manifest.lock */,
 				C6ADD0CD22D9E2C0009A02D2 /* Sources */,
 				C6ADD0CE22D9E2C0009A02D2 /* Frameworks */,
 				C6ADD0CF22D9E2C0009A02D2 /* Resources */,
+				61BA84D8D9D3B6BC14F1082F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +186,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6ADD0F122D9E2C1009A02D2 /* Build configuration list for PBXNativeTarget "RoundUpTests" */;
 			buildPhases = (
+				B66E6FEC38B5BDA627F7D730 /* [CP] Check Pods Manifest.lock */,
 				C6ADD0E122D9E2C1009A02D2 /* Sources */,
 				C6ADD0E222D9E2C1009A02D2 /* Frameworks */,
 				C6ADD0E322D9E2C1009A02D2 /* Resources */,
@@ -221,6 +257,77 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		61BA84D8D9D3B6BC14F1082F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RoundUp/Pods-RoundUp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-Synchronous/Alamofire_Synchronous.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire_Synchronous.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RoundUp/Pods-RoundUp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A975AD82A6A44152A94D1651 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RoundUp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B66E6FEC38B5BDA627F7D730 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RoundUpTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C6ADD0CD22D9E2C0009A02D2 /* Sources */ = {
@@ -378,6 +485,7 @@
 		};
 		C6ADD0EF22D9E2C1009A02D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A94AB27306DA909976F98401 /* Pods-RoundUp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +504,7 @@
 		};
 		C6ADD0F022D9E2C1009A02D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06AAF78101039654511FF1A9 /* Pods-RoundUp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -414,6 +523,7 @@
 		};
 		C6ADD0F222D9E2C1009A02D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25CD3B247099E9EE8EDBE43A /* Pods-RoundUpTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -435,6 +545,7 @@
 		};
 		C6ADD0F322D9E2C1009A02D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AFBCB0C0572767D4524FA67 /* Pods-RoundUpTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
