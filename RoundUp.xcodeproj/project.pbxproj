@@ -19,6 +19,24 @@
 		C6ADD10B22D9E5BB009A02D2 /* RoundUpViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD10A22D9E5BB009A02D2 /* RoundUpViewControllerProtocol.swift */; };
 		C6ADD10D22D9E5D3009A02D2 /* BaseViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD10C22D9E5D3009A02D2 /* BaseViewControllerProtocol.swift */; };
 		C6ADD10F22D9E611009A02D2 /* RoundUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD10E22D9E611009A02D2 /* RoundUpPresenter.swift */; };
+		C6ADD11322D9F26B009A02D2 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD11222D9F26B009A02D2 /* AccountService.swift */; };
+		C6ADD11622D9F278009A02D2 /* AccountServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD11522D9F278009A02D2 /* AccountServiceProtocol.swift */; };
+		C6ADD12022D9F3FE009A02D2 /* CustomerAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD11F22D9F3FE009A02D2 /* CustomerAccounts.swift */; };
+		C6ADD12222D9F438009A02D2 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD12122D9F438009A02D2 /* Account.swift */; };
+		C6ADD12722D9F984009A02D2 /* BaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD12622D9F984009A02D2 /* BaseClient.swift */; };
+		C6ADD12A22D9F9A7009A02D2 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD12922D9F9A7009A02D2 /* APIEndpoint.swift */; };
+		C6ADD12C22D9F9B9009A02D2 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD12B22D9F9B9009A02D2 /* APIResponse.swift */; };
+		C6ADD12E22D9F9CE009A02D2 /* APIException.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD12D22D9F9CE009A02D2 /* APIException.swift */; };
+		C6ADD13122D9F9FC009A02D2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD13022D9F9FC009A02D2 /* Constants.swift */; };
+		C6ADD13422D9FB92009A02D2 /* Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD13322D9FB92009A02D2 /* Print.swift */; };
+		C6ADD13622D9FBAF009A02D2 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD13522D9FBAF009A02D2 /* ApiClient.swift */; };
+		C6ADD13922D9FBC8009A02D2 /* ApiClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD13822D9FBC8009A02D2 /* ApiClientProtocol.swift */; };
+		C6ADD13C22D9FC45009A02D2 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD13B22D9FC45009A02D2 /* Decoder.swift */; };
+		C6ADD13E22DA1E9F009A02D2 /* TransactionItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD13D22DA1E9F009A02D2 /* TransactionItems.swift */; };
+		C6ADD14022DA1EC0009A02D2 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD13F22DA1EC0009A02D2 /* Transaction.swift */; };
+		C6ADD14222DA1ED3009A02D2 /* SourceAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD14122DA1ED3009A02D2 /* SourceAmount.swift */; };
+		C6ADD14422DA1EEB009A02D2 /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD14322DA1EEB009A02D2 /* Amount.swift */; };
+		C6ADD14722DA28AF009A02D2 /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD14622DA28AF009A02D2 /* CGFloatExtensions.swift */; };
 		E7663E53476FD30B3EC9082E /* Pods_RoundUpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92CF5719D4B48EACD8A3642C /* Pods_RoundUpTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +72,24 @@
 		C6ADD10A22D9E5BB009A02D2 /* RoundUpViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUpViewControllerProtocol.swift; sourceTree = "<group>"; };
 		C6ADD10C22D9E5D3009A02D2 /* BaseViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerProtocol.swift; sourceTree = "<group>"; };
 		C6ADD10E22D9E611009A02D2 /* RoundUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUpPresenter.swift; sourceTree = "<group>"; };
+		C6ADD11222D9F26B009A02D2 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
+		C6ADD11522D9F278009A02D2 /* AccountServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServiceProtocol.swift; sourceTree = "<group>"; };
+		C6ADD11F22D9F3FE009A02D2 /* CustomerAccounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerAccounts.swift; sourceTree = "<group>"; };
+		C6ADD12122D9F438009A02D2 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		C6ADD12622D9F984009A02D2 /* BaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseClient.swift; sourceTree = "<group>"; };
+		C6ADD12922D9F9A7009A02D2 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		C6ADD12B22D9F9B9009A02D2 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		C6ADD12D22D9F9CE009A02D2 /* APIException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIException.swift; sourceTree = "<group>"; };
+		C6ADD13022D9F9FC009A02D2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C6ADD13322D9FB92009A02D2 /* Print.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Print.swift; sourceTree = "<group>"; };
+		C6ADD13522D9FBAF009A02D2 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		C6ADD13822D9FBC8009A02D2 /* ApiClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientProtocol.swift; sourceTree = "<group>"; };
+		C6ADD13B22D9FC45009A02D2 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
+		C6ADD13D22DA1E9F009A02D2 /* TransactionItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionItems.swift; sourceTree = "<group>"; };
+		C6ADD13F22DA1EC0009A02D2 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		C6ADD14122DA1ED3009A02D2 /* SourceAmount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceAmount.swift; sourceTree = "<group>"; };
+		C6ADD14322DA1EEB009A02D2 /* Amount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amount.swift; sourceTree = "<group>"; };
+		C6ADD14622DA28AF009A02D2 /* CGFloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,9 +162,12 @@
 		C6ADD0F422D9E2EA009A02D2 /* System */ = {
 			isa = PBXGroup;
 			children = (
+				C6ADD0F522D9E2EF009A02D2 /* AppDelegate */,
+				C6ADD14522DA2897009A02D2 /* Extensions */,
+				C6ADD13222D9FB7D009A02D2 /* Global */,
+				C6ADD12F22D9F9E9009A02D2 /* Constants */,
 				C6ADD0F722D9E307009A02D2 /* UI */,
 				C6ADD0F622D9E2FF009A02D2 /* Images */,
-				C6ADD0F522D9E2EF009A02D2 /* AppDelegate */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -171,7 +210,8 @@
 				C6ADD0FA22D9E452009A02D2 /* View */,
 				C6ADD10422D9E567009A02D2 /* Presenter */,
 				C6ADD11022D9E6AC009A02D2 /* Model */,
-				C6ADD11122D9E6C6009A02D2 /* DataSource */,
+				C6ADD11122D9E6C6009A02D2 /* Service */,
+				C6ADD12522D9F967009A02D2 /* Client */,
 			);
 			path = MVP;
 			sourceTree = "<group>";
@@ -233,15 +273,93 @@
 		C6ADD11022D9E6AC009A02D2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C6ADD11F22D9F3FE009A02D2 /* CustomerAccounts.swift */,
+				C6ADD12122D9F438009A02D2 /* Account.swift */,
+				C6ADD13D22DA1E9F009A02D2 /* TransactionItems.swift */,
+				C6ADD13F22DA1EC0009A02D2 /* Transaction.swift */,
+				C6ADD14322DA1EEB009A02D2 /* Amount.swift */,
+				C6ADD14122DA1ED3009A02D2 /* SourceAmount.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		C6ADD11122D9E6C6009A02D2 /* DataSource */ = {
+		C6ADD11122D9E6C6009A02D2 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				C6ADD11422D9F26F009A02D2 /* Abstraction */,
+				C6ADD11222D9F26B009A02D2 /* AccountService.swift */,
 			);
-			path = DataSource;
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C6ADD11422D9F26F009A02D2 /* Abstraction */ = {
+			isa = PBXGroup;
+			children = (
+				C6ADD11522D9F278009A02D2 /* AccountServiceProtocol.swift */,
+			);
+			path = Abstraction;
+			sourceTree = "<group>";
+		};
+		C6ADD12522D9F967009A02D2 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				C6ADD13722D9FBBF009A02D2 /* Abstraction */,
+				C6ADD13A22D9FC30009A02D2 /* Decoder */,
+				C6ADD12822D9F99F009A02D2 /* Poso */,
+				C6ADD12622D9F984009A02D2 /* BaseClient.swift */,
+				C6ADD13522D9FBAF009A02D2 /* ApiClient.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		C6ADD12822D9F99F009A02D2 /* Poso */ = {
+			isa = PBXGroup;
+			children = (
+				C6ADD12922D9F9A7009A02D2 /* APIEndpoint.swift */,
+				C6ADD12B22D9F9B9009A02D2 /* APIResponse.swift */,
+				C6ADD12D22D9F9CE009A02D2 /* APIException.swift */,
+			);
+			path = Poso;
+			sourceTree = "<group>";
+		};
+		C6ADD12F22D9F9E9009A02D2 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C6ADD13022D9F9FC009A02D2 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		C6ADD13222D9FB7D009A02D2 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				C6ADD13322D9FB92009A02D2 /* Print.swift */,
+			);
+			name = Global;
+			sourceTree = "<group>";
+		};
+		C6ADD13722D9FBBF009A02D2 /* Abstraction */ = {
+			isa = PBXGroup;
+			children = (
+				C6ADD13822D9FBC8009A02D2 /* ApiClientProtocol.swift */,
+			);
+			path = Abstraction;
+			sourceTree = "<group>";
+		};
+		C6ADD13A22D9FC30009A02D2 /* Decoder */ = {
+			isa = PBXGroup;
+			children = (
+				C6ADD13B22D9FC45009A02D2 /* Decoder.swift */,
+			);
+			path = Decoder;
+			sourceTree = "<group>";
+		};
+		C6ADD14522DA2897009A02D2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C6ADD14622DA28AF009A02D2 /* CGFloatExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F8B1DAACF9F7B2B607C33B8C /* Pods */ = {
@@ -430,14 +548,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6ADD12A22D9F9A7009A02D2 /* APIEndpoint.swift in Sources */,
+				C6ADD12722D9F984009A02D2 /* BaseClient.swift in Sources */,
+				C6ADD11322D9F26B009A02D2 /* AccountService.swift in Sources */,
+				C6ADD13622D9FBAF009A02D2 /* ApiClient.swift in Sources */,
 				C6ADD10922D9E589009A02D2 /* BasePresenterProtocol.swift in Sources */,
 				C6ADD10722D9E577009A02D2 /* RoundUpPresenterProtocol.swift in Sources */,
+				C6ADD12E22D9F9CE009A02D2 /* APIException.swift in Sources */,
+				C6ADD13422D9FB92009A02D2 /* Print.swift in Sources */,
+				C6ADD12222D9F438009A02D2 /* Account.swift in Sources */,
+				C6ADD11622D9F278009A02D2 /* AccountServiceProtocol.swift in Sources */,
+				C6ADD14422DA1EEB009A02D2 /* Amount.swift in Sources */,
+				C6ADD14222DA1ED3009A02D2 /* SourceAmount.swift in Sources */,
 				C6ADD0FD22D9E4B5009A02D2 /* RoundUpViewController.swift in Sources */,
+				C6ADD13922D9FBC8009A02D2 /* ApiClientProtocol.swift in Sources */,
+				C6ADD13122D9F9FC009A02D2 /* Constants.swift in Sources */,
 				C6ADD0D522D9E2C0009A02D2 /* AppDelegate.swift in Sources */,
+				C6ADD14022DA1EC0009A02D2 /* Transaction.swift in Sources */,
 				C6ADD10B22D9E5BB009A02D2 /* RoundUpViewControllerProtocol.swift in Sources */,
+				C6ADD13E22DA1E9F009A02D2 /* TransactionItems.swift in Sources */,
 				C6ADD10D22D9E5D3009A02D2 /* BaseViewControllerProtocol.swift in Sources */,
+				C6ADD14722DA28AF009A02D2 /* CGFloatExtensions.swift in Sources */,
 				C6ADD10F22D9E611009A02D2 /* RoundUpPresenter.swift in Sources */,
 				C6ADD10322D9E53A009A02D2 /* BaseViewController.swift in Sources */,
+				C6ADD12022D9F3FE009A02D2 /* CustomerAccounts.swift in Sources */,
+				C6ADD13C22D9FC45009A02D2 /* Decoder.swift in Sources */,
+				C6ADD12C22D9F9B9009A02D2 /* APIResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

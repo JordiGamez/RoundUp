@@ -14,7 +14,7 @@ class BaseViewController: UIViewController {
     // MARK: - Private constants
     
     private let statusBarKey = "statusBarWindow.statusBar"
-    private let statusBarBackgroundColor: UIColor = .black
+    private let statusBarBackgroundColor: UIColor = .white
     
     // MARK: - Initializers
     

@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: Public methods
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        setInitialScreen()
         return true
     }
 
@@ -30,4 +31,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidBecomeActive(_ application: UIApplication) {}
 
     func applicationWillTerminate(_ application: UIApplication) {}
+    
+    // MARK: Private methods
+    
+    /// Set initial screen
+    private func setInitialScreen() {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let roundUpViewController = RoundUpViewController()
+        window?.rootViewController = roundUpViewController
+        window?.makeKeyAndVisible()
+    }
 }
