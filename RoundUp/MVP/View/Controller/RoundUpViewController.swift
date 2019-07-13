@@ -18,16 +18,32 @@ class RoundUpViewController: BaseViewController {
             totalSavingsLabel.text = "Your current weekly savings are"
         }
     }
-    @IBOutlet weak var totalSavingsValueLabel: UILabel!
+    @IBOutlet weak var totalSavingsValueLabel: UILabel! {
+        didSet {
+            totalSavingsValueLabel.text = "£0"
+        }
+    }
     @IBOutlet weak var transferSavingsButton: UIButton! {
         didSet {
-            transferSavingsButton.backgroundColor = .magenta
+            transferSavingsButton.backgroundColor = UIColor(red: 110/255, green: 47/255, blue: 212/255, alpha: 1.0)
             transferSavingsButton.setTitle("Transfer money", for: .normal)
             transferSavingsButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
             transferSavingsButton.layer.cornerRadius = 6
             transferSavingsButton.tintColor = .white
+            transferSavingsButton.addTarget(self,
+                                            action: #selector(transferSavings),
+                                            for: .touchUpInside)
         }
     }
+    @IBOutlet weak var transferDoneLabel: UILabel! {
+        didSet {
+            transferDoneLabel.isHidden = true
+        }
+    }
+    
+    // MARK: Private variables
+    
+    private var totalSavedAmount: CGFloat = 0
     
     // MARK: Public variables
     
@@ -48,6 +64,13 @@ class RoundUpViewController: BaseViewController {
     private func bindPresenter() {
         presenter?.bind(view: self)
     }
+    
+    // MARK: Actions
+    
+    /// Detect when transfer savings buttong is tapped
+    @objc private func transferSavings() {
+        presenter?.transferSavings(amount: totalSavedAmount)
+    }
 }
 
 // MARK: - RoundUpViewControllerProtocol protocol conformance
@@ -63,7 +86,16 @@ extension RoundUpViewController: RoundUpViewControllerProtocol {
     ///
     /// - Parameter value: amount in CGFloat format
     func displayTotalSavedAmount(value: CGFloat) {
+        totalSavedAmount = value
         totalSavingsValueLabel.text = "£" + value.description
+    }
+    
+    /// Display transfer successfully made
+    func displayTranferSuccessfullyMade() {
+        transferSavingsButton.isHidden = true
+        transferDoneLabel.text = "Transfer complete"
+        transferDoneLabel.isHidden = false
+        totalSavingsValueLabel.text = "£0"
     }
     
     /// Show error

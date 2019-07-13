@@ -6,7 +6,7 @@
 //  Copyright © 2019 JordiGamez. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 /// Abstraction for RoundUpPresenter
 protocol RoundUpPresenterProtocol: BasePresenterProtocol {
@@ -15,4 +15,9 @@ protocol RoundUpPresenterProtocol: BasePresenterProtocol {
     ///
     /// - Parameter view: RoundUpViewControllerProtocol object
     func bind(view: RoundUpViewControllerProtocol)
+    
+    /// Transfer savings to a saving acount
+    ///
+    /// - Parameter amount: Amount to transfer
+    func transferSavings(amount: CGFloat)
 }

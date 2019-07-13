@@ -16,6 +16,9 @@ protocol RoundUpViewControllerProtocol: BaseViewControllerProtocol {
     /// - Parameter value: amount in CGFloat format
     func displayTotalSavedAmount(value: CGFloat)
     
+    /// Display transfer successfully made
+    func displayTranferSuccessfullyMade()
+    
     /// Show error
     func showError()
 }

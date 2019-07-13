@@ -37,6 +37,8 @@
 		C6ADD14222DA1ED3009A02D2 /* SourceAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD14122DA1ED3009A02D2 /* SourceAmount.swift */; };
 		C6ADD14422DA1EEB009A02D2 /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD14322DA1EEB009A02D2 /* Amount.swift */; };
 		C6ADD14722DA28AF009A02D2 /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD14622DA28AF009A02D2 /* CGFloatExtensions.swift */; };
+		C6ADD14922DA2E34009A02D2 /* SavingsGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD14822DA2E33009A02D2 /* SavingsGoal.swift */; };
+		C6ADD15122DA4FD4009A02D2 /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD15022DA4FD4009A02D2 /* Transfer.swift */; };
 		E7663E53476FD30B3EC9082E /* Pods_RoundUpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92CF5719D4B48EACD8A3642C /* Pods_RoundUpTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +92,8 @@
 		C6ADD14122DA1ED3009A02D2 /* SourceAmount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceAmount.swift; sourceTree = "<group>"; };
 		C6ADD14322DA1EEB009A02D2 /* Amount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amount.swift; sourceTree = "<group>"; };
 		C6ADD14622DA28AF009A02D2 /* CGFloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
+		C6ADD14822DA2E33009A02D2 /* SavingsGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsGoal.swift; sourceTree = "<group>"; };
+		C6ADD15022DA4FD4009A02D2 /* Transfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +283,8 @@
 				C6ADD13F22DA1EC0009A02D2 /* Transaction.swift */,
 				C6ADD14322DA1EEB009A02D2 /* Amount.swift */,
 				C6ADD14122DA1ED3009A02D2 /* SourceAmount.swift */,
+				C6ADD14822DA2E33009A02D2 /* SavingsGoal.swift */,
+				C6ADD15022DA4FD4009A02D2 /* Transfer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -567,8 +573,10 @@
 				C6ADD14022DA1EC0009A02D2 /* Transaction.swift in Sources */,
 				C6ADD10B22D9E5BB009A02D2 /* RoundUpViewControllerProtocol.swift in Sources */,
 				C6ADD13E22DA1E9F009A02D2 /* TransactionItems.swift in Sources */,
+				C6ADD14922DA2E34009A02D2 /* SavingsGoal.swift in Sources */,
 				C6ADD10D22D9E5D3009A02D2 /* BaseViewControllerProtocol.swift in Sources */,
 				C6ADD14722DA28AF009A02D2 /* CGFloatExtensions.swift in Sources */,
+				C6ADD15122DA4FD4009A02D2 /* Transfer.swift in Sources */,
 				C6ADD10F22D9E611009A02D2 /* RoundUpPresenter.swift in Sources */,
 				C6ADD10322D9E53A009A02D2 /* BaseViewController.swift in Sources */,
 				C6ADD12022D9F3FE009A02D2 /* CustomerAccounts.swift in Sources */,

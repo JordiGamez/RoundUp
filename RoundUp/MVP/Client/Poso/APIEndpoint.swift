@@ -16,6 +16,9 @@ enum APIEndpoint {
     
     case accounts
     case transactions(accountId: String, categoryId: String)
+    case savingsGoals(accountId: String)
+    case transferMoneyToSavingsGoal(accountId: String, savingsGoalId: String,
+        amount: CGFloat)
     
     // MARK: Public variables
     
@@ -33,32 +36,63 @@ enum APIEndpoint {
             return "accounts"
         case .transactions(let accountId, let categoryId):
             return "feed/account/\(accountId)/category/\(categoryId)"
+        case .savingsGoals(let accountId):
+            return "account/\(accountId)/savings-goals"
+        case .transferMoneyToSavingsGoal(let accountId, let savingsGoalId, _):
+            return "account/\(accountId)/savings-goals/\(savingsGoalId)/add-money/\(UUID().uuidString)"
         }
     }
     
     var method: HTTPMethod {
         switch self {
+        case .savingsGoals(_): return .put
+        case .transferMoneyToSavingsGoal(_, _, _): return .put
         default: return .get
         }
     }
     
     var parameters: Parameters? {
         switch self {
+        case .savingsGoals(_):
+            return [
+                "name": "Saving account",
+                "currency": "GBP",
+                "target": [
+                    "currency": "GBP",
+                    "minorUnits": 100000
+                ],
+                "base64EncodedPhoto": "string"
+            ]
+        case .transferMoneyToSavingsGoal(_, _, let amount):
+            return [
+                "amount": [
+                    "currency": "GBP",
+                    "minorUnits": Int(amount * 100)
+                ]
+            ]
         default: return nil
         }
     }
     
     var encoding: ParameterEncoding {
-        switch self {
-        default: return URLEncoding.default
-        }
+        return JSONEncoding.default
     }
     
     var headers: HTTPHeaders? {
-        return [
-            "Accept": "application/json",
-            "Authorization": "Bearer \(Constants.API.Header.Token.token)",
-            "User-Agent": "\(Constants.API.Header.UserAgent.name)"
-        ]
+        switch self {
+        case .savingsGoals(_), .transferMoneyToSavingsGoal(_, _, _):
+            return [
+                "Accept": "application/json",
+                "Authorization": "Bearer \(Constants.API.Header.Token.token)",
+                "User-Agent": "\(Constants.API.Header.UserAgent.name)",
+                "Content-Type": "application/json"
+            ]
+        default:
+            return [
+                "Accept": "application/json",
+                "Authorization": "Bearer \(Constants.API.Header.Token.token)",
+                "User-Agent": "\(Constants.API.Header.UserAgent.name)"
+            ]
+        }
     }
 }

@@ -6,7 +6,7 @@
 //  Copyright © 2019 JordiGamez. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 /// Account service
 class AccountService {
@@ -51,6 +51,41 @@ extension AccountService: AccountServiceProtocol {
         do {
             if let result = try apiClient?.loadAccountTransactions(
                 accountId: accountId, categoryId: categoryId) {
+                callBack(result)
+            }
+            callBack(nil)
+        } catch {
+            callBack(nil)
+        }
+    }
+    
+    /// Create a savings goal
+    ///
+    /// - Parameters:
+    ///   - accountId: account id
+    ///   - callBack: SavingsGoal
+    func setSavingsGoal(accountId: String, callBack: (SavingsGoal?) -> Void) {
+        do {
+            if let result = try apiClient?.createSavingsGoal(accountId: accountId) {
+                callBack(result)
+            }
+            callBack(nil)
+        } catch {
+            callBack(nil)
+        }
+    }
+    
+    /// Add money into a savings goal
+    ///
+    /// - Parameters:
+    ///   - accountId: account id
+    ///   - savingsGoalId: savings goal id
+    ///   - money: money value
+    ///   - callBack: Transfer
+    func setTransferMoneyToSavingsGoal(accountId: String, savingsGoalId: String, money: CGFloat, callBack: (Transfer?) -> Void) {
+        do {
+            if let result = try apiClient?.transferMoneyToSavingsGoal(
+                accountId: accountId, savingsGoalId: savingsGoalId, money: money) {
                 callBack(result)
             }
             callBack(nil)

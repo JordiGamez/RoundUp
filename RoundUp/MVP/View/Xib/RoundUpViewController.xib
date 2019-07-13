@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="totalSavingsLabel" destination="EZ3-tv-6uc" id="mAW-M7-aTu"/>
                 <outlet property="totalSavingsValueLabel" destination="BJm-cw-OUJ" id="n44-rF-ddr"/>
+                <outlet property="transferDoneLabel" destination="DTl-BR-dPE" id="625-aR-hnY"/>
                 <outlet property="transferSavingsButton" destination="tCu-Cl-EcV" id="trb-xK-lg4"/>
                 <outlet property="view" destination="iN0-l3-epB" id="3w4-cY-Mjd"/>
             </connections>
@@ -36,22 +37,31 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCu-Cl-EcV">
-                    <rect key="frame" x="16" y="506" width="382" height="45"/>
+                    <rect key="frame" x="107" y="506" width="200" height="45"/>
                     <constraints>
+                        <constraint firstAttribute="width" constant="200" id="4rT-ea-cnJ"/>
                         <constraint firstAttribute="height" constant="45" id="D1i-vn-Yfr"/>
                     </constraints>
                     <state key="normal" title="Button"/>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTl-BR-dPE">
+                    <rect key="frame" x="107" y="518.5" width="200" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="BJm-cw-OUJ" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="Ay5-ZW-bkI"/>
                 <constraint firstItem="tCu-Cl-EcV" firstAttribute="top" secondItem="BJm-cw-OUJ" secondAttribute="bottom" constant="20" id="G5z-dk-Ohc"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tCu-Cl-EcV" secondAttribute="trailing" constant="16" id="Mwo-Rv-KCg"/>
+                <constraint firstItem="DTl-BR-dPE" firstAttribute="centerY" secondItem="tCu-Cl-EcV" secondAttribute="centerY" id="I8W-gZ-WcH"/>
+                <constraint firstItem="DTl-BR-dPE" firstAttribute="leading" secondItem="tCu-Cl-EcV" secondAttribute="leading" id="UyU-97-Pbq"/>
                 <constraint firstItem="EZ3-tv-6uc" firstAttribute="centerX" secondItem="BJm-cw-OUJ" secondAttribute="centerX" id="bwt-xd-DQ0"/>
                 <constraint firstItem="BJm-cw-OUJ" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="emj-AC-JXx"/>
-                <constraint firstItem="tCu-Cl-EcV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="hDu-HV-YbX"/>
+                <constraint firstItem="DTl-BR-dPE" firstAttribute="trailing" secondItem="tCu-Cl-EcV" secondAttribute="trailing" id="hbs-Oq-o51"/>
                 <constraint firstItem="tCu-Cl-EcV" firstAttribute="centerX" secondItem="BJm-cw-OUJ" secondAttribute="centerX" id="mez-ga-jeh"/>
+                <constraint firstItem="DTl-BR-dPE" firstAttribute="centerX" secondItem="tCu-Cl-EcV" secondAttribute="centerX" id="ook-Iv-hZR"/>
                 <constraint firstItem="BJm-cw-OUJ" firstAttribute="top" secondItem="EZ3-tv-6uc" secondAttribute="bottom" constant="10" id="pFu-c9-auM"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
