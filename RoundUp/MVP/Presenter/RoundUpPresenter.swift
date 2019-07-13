@@ -37,24 +37,26 @@ final class RoundUpPresenter {
     
     /// Load account information
     private func loadAccountInformation() {
-        accountService?.getAccountInformation() { [weak self] accountInformation in
-            if let accountInformation = accountInformation {
-                if let accounts = accountInformation.accounts {
-                    for account in accounts {
-                        if let accountId = account.accountUid,
-                            let categoryId = account.defaultCategory {
-                            self?.accountId = accountId
-                            loadTransactions(accountId: accountId,
-                                             categoryId: categoryId)
-                        } else {
-                            self?.showError()
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.accountService?.getAccountInformation() { [weak self] accountInformation in
+                if let accountInformation = accountInformation {
+                    if let accounts = accountInformation.accounts {
+                        for account in accounts {
+                            if let accountId = account.accountUid,
+                                let categoryId = account.defaultCategory {
+                                self?.accountId = accountId
+                                self?.loadTransactions(accountId: accountId,
+                                                          categoryId: categoryId)
+                            } else {
+                                self?.showError()
+                            }
                         }
+                    } else {
+                        self?.showError()
                     }
                 } else {
                     self?.showError()
                 }
-            } else {
-                self?.showError()
             }
         }
     }
@@ -69,13 +71,16 @@ final class RoundUpPresenter {
             if let transactions = transactions {
                 if let items = transactions.feedItems {
                     for transaction in items {
+//                        transactionTime
                         if let amount = transaction.amount {
                             let value = CGFloat(amount.minorUnits!) / 10
                             let savedValue = value.rounded(.up) - value
                             savings += savedValue.rounded(toPlaces: 2)
                         }
                     }
-                    self?.view?.displayTotalSavedAmount(value: savings)
+                    DispatchQueue.main.async {
+                        self?.view?.displayTotalSavedAmount(value: self?.savings ?? 0)
+                    }
                 } else {
                     self?.showError()
                 }
@@ -87,21 +92,23 @@ final class RoundUpPresenter {
     
     /// Create a savings goal
     private func createSavingsGoal() {
-        if let accountId = accountId {
-            accountService?.setSavingsGoal(accountId: accountId) { [weak self] savingsGoal in
-                if let savingsGoal = savingsGoal {
-                    if let savingsGoalUid = savingsGoal.savingsGoalUid {
-                        self?.savingsGoalId = savingsGoalUid
-                        transferMoneyToSavingsGoal()
+        DispatchQueue.global(qos: .userInitiated).async {
+            if let accountId = self.accountId {
+                self.accountService?.setSavingsGoal(accountId: accountId) { [weak self] savingsGoal in
+                    if let savingsGoal = savingsGoal {
+                        if let savingsGoalUid = savingsGoal.savingsGoalUid {
+                            self?.savingsGoalId = savingsGoalUid
+                            self?.transferMoneyToSavingsGoal()
+                        } else {
+                            self?.showError()
+                        }
                     } else {
                         self?.showError()
                     }
-                } else {
-                    self?.showError()
                 }
+            } else {
+                self.showError()
             }
-        } else {
-            showError()
         }
     }
     
@@ -110,8 +117,10 @@ final class RoundUpPresenter {
         if let accountId = accountId, let savingsGoalId = savingsGoalId {
             if savings > 0 {
                 accountService?.setTransferMoneyToSavingsGoal(accountId: accountId, savingsGoalId: savingsGoalId, money: savings) { [weak self] transfer in
-                    if let transfer = transfer {
-                        self?.view?.displayTranferSuccessfullyMade()
+                    if transfer != nil {
+                        DispatchQueue.main.async {
+                            self?.view?.displayTranferSuccessfullyMade()
+                        }
                     }
                 }
             } else {
@@ -124,7 +133,9 @@ final class RoundUpPresenter {
     
     /// Show error
     private func showError() {
-        view?.showError()
+        DispatchQueue.main.async {
+            self.view?.showError()
+        }
     }
 }
 
