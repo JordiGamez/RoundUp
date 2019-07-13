@@ -71,7 +71,6 @@ final class RoundUpPresenter {
             if let transactions = transactions {
                 if let items = transactions.feedItems {
                     for transaction in items {
-//                        transactionTime
                         if let amount = transaction.amount {
                             let value = CGFloat(amount.minorUnits!) / 10
                             let savedValue = value.rounded(.up) - value

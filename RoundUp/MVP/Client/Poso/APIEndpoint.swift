@@ -35,11 +35,11 @@ enum APIEndpoint {
         case .accounts:
             return "accounts"
         case .transactions(let accountId, let categoryId):
-            return "feed/account/\(accountId)/category/\(categoryId)"
+            return "feed/account/\(accountId)/category/\(categoryId)/transactions-between/?minTransactionTimestamp=2019-07-08T00:00:00.000Z&maxTransactionTimestamp=2019-07-14T00:00:00.000Z"
         case .savingsGoals(let accountId):
             return "account/\(accountId)/savings-goals"
         case .transferMoneyToSavingsGoal(let accountId, let savingsGoalId, _):
-            return "account/\(accountId)/savings-goals/\(savingsGoalId)/add-money/\(UUID().uuidString)"
+            return "account/\(accountId)/savings-goals/\(savingsGoalId)/add-money/\(UUID().uuidString)?"
         }
     }
     
