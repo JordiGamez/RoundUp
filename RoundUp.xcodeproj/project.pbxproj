@@ -11,6 +11,14 @@
 		C6ADD0D522D9E2C0009A02D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD0D422D9E2C0009A02D2 /* AppDelegate.swift */; };
 		C6ADD0DC22D9E2C1009A02D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6ADD0DB22D9E2C1009A02D2 /* Assets.xcassets */; };
 		C6ADD0DF22D9E2C1009A02D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6ADD0DD22D9E2C1009A02D2 /* LaunchScreen.storyboard */; };
+		C6ADD0FD22D9E4B5009A02D2 /* RoundUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD0FC22D9E4B5009A02D2 /* RoundUpViewController.swift */; };
+		C6ADD10122D9E520009A02D2 /* RoundUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6ADD10022D9E520009A02D2 /* RoundUpViewController.xib */; };
+		C6ADD10322D9E53A009A02D2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD10222D9E53A009A02D2 /* BaseViewController.swift */; };
+		C6ADD10722D9E577009A02D2 /* RoundUpPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD10622D9E577009A02D2 /* RoundUpPresenterProtocol.swift */; };
+		C6ADD10922D9E589009A02D2 /* BasePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD10822D9E589009A02D2 /* BasePresenterProtocol.swift */; };
+		C6ADD10B22D9E5BB009A02D2 /* RoundUpViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD10A22D9E5BB009A02D2 /* RoundUpViewControllerProtocol.swift */; };
+		C6ADD10D22D9E5D3009A02D2 /* BaseViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD10C22D9E5D3009A02D2 /* BaseViewControllerProtocol.swift */; };
+		C6ADD10F22D9E611009A02D2 /* RoundUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD10E22D9E611009A02D2 /* RoundUpPresenter.swift */; };
 		E7663E53476FD30B3EC9082E /* Pods_RoundUpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92CF5719D4B48EACD8A3642C /* Pods_RoundUpTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +46,14 @@
 		C6ADD0E022D9E2C1009A02D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6ADD0E522D9E2C1009A02D2 /* RoundUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoundUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6ADD0EB22D9E2C1009A02D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6ADD0FC22D9E4B5009A02D2 /* RoundUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUpViewController.swift; sourceTree = "<group>"; };
+		C6ADD10022D9E520009A02D2 /* RoundUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundUpViewController.xib; sourceTree = "<group>"; };
+		C6ADD10222D9E53A009A02D2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C6ADD10622D9E577009A02D2 /* RoundUpPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUpPresenterProtocol.swift; sourceTree = "<group>"; };
+		C6ADD10822D9E589009A02D2 /* BasePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenterProtocol.swift; sourceTree = "<group>"; };
+		C6ADD10A22D9E5BB009A02D2 /* RoundUpViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUpViewControllerProtocol.swift; sourceTree = "<group>"; };
+		C6ADD10C22D9E5D3009A02D2 /* BaseViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerProtocol.swift; sourceTree = "<group>"; };
+		C6ADD10E22D9E611009A02D2 /* RoundUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUpPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +108,9 @@
 		C6ADD0D322D9E2C0009A02D2 /* RoundUp */ = {
 			isa = PBXGroup;
 			children = (
+				C6ADD0F922D9E44C009A02D2 /* MVP */,
 				C6ADD0F422D9E2EA009A02D2 /* System */,
+				C6ADD0E022D9E2C1009A02D2 /* Info.plist */,
 			);
 			path = RoundUp;
 			sourceTree = "<group>";
@@ -111,7 +129,6 @@
 				C6ADD0F722D9E307009A02D2 /* UI */,
 				C6ADD0F622D9E2FF009A02D2 /* Images */,
 				C6ADD0F522D9E2EF009A02D2 /* AppDelegate */,
-				C6ADD0E022D9E2C1009A02D2 /* Info.plist */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -148,6 +165,85 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
+		C6ADD0F922D9E44C009A02D2 /* MVP */ = {
+			isa = PBXGroup;
+			children = (
+				C6ADD0FA22D9E452009A02D2 /* View */,
+				C6ADD10422D9E567009A02D2 /* Presenter */,
+				C6ADD11022D9E6AC009A02D2 /* Model */,
+				C6ADD11122D9E6C6009A02D2 /* DataSource */,
+			);
+			path = MVP;
+			sourceTree = "<group>";
+		};
+		C6ADD0FA22D9E452009A02D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C6ADD0FE22D9E4FD009A02D2 /* Controller */,
+				C6ADD0FF22D9E50D009A02D2 /* Xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C6ADD0FB22D9E462009A02D2 /* Abstraction */ = {
+			isa = PBXGroup;
+			children = (
+				C6ADD10C22D9E5D3009A02D2 /* BaseViewControllerProtocol.swift */,
+				C6ADD10A22D9E5BB009A02D2 /* RoundUpViewControllerProtocol.swift */,
+			);
+			path = Abstraction;
+			sourceTree = "<group>";
+		};
+		C6ADD0FE22D9E4FD009A02D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C6ADD0FB22D9E462009A02D2 /* Abstraction */,
+				C6ADD10222D9E53A009A02D2 /* BaseViewController.swift */,
+				C6ADD0FC22D9E4B5009A02D2 /* RoundUpViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C6ADD0FF22D9E50D009A02D2 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				C6ADD10022D9E520009A02D2 /* RoundUpViewController.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		C6ADD10422D9E567009A02D2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C6ADD10522D9E56E009A02D2 /* Abstraction */,
+				C6ADD10E22D9E611009A02D2 /* RoundUpPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C6ADD10522D9E56E009A02D2 /* Abstraction */ = {
+			isa = PBXGroup;
+			children = (
+				C6ADD10822D9E589009A02D2 /* BasePresenterProtocol.swift */,
+				C6ADD10622D9E577009A02D2 /* RoundUpPresenterProtocol.swift */,
+			);
+			path = Abstraction;
+			sourceTree = "<group>";
+		};
+		C6ADD11022D9E6AC009A02D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C6ADD11122D9E6C6009A02D2 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
 		F8B1DAACF9F7B2B607C33B8C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,7 +252,6 @@
 				25CD3B247099E9EE8EDBE43A /* Pods-RoundUpTests.debug.xcconfig */,
 				3AFBCB0C0572767D4524FA67 /* Pods-RoundUpTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -245,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6ADD0DF22D9E2C1009A02D2 /* LaunchScreen.storyboard in Resources */,
+				C6ADD10122D9E520009A02D2 /* RoundUpViewController.xib in Resources */,
 				C6ADD0DC22D9E2C1009A02D2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,7 +430,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6ADD10922D9E589009A02D2 /* BasePresenterProtocol.swift in Sources */,
+				C6ADD10722D9E577009A02D2 /* RoundUpPresenterProtocol.swift in Sources */,
+				C6ADD0FD22D9E4B5009A02D2 /* RoundUpViewController.swift in Sources */,
 				C6ADD0D522D9E2C0009A02D2 /* AppDelegate.swift in Sources */,
+				C6ADD10B22D9E5BB009A02D2 /* RoundUpViewControllerProtocol.swift in Sources */,
+				C6ADD10D22D9E5D3009A02D2 /* BaseViewControllerProtocol.swift in Sources */,
+				C6ADD10F22D9E611009A02D2 /* RoundUpPresenter.swift in Sources */,
+				C6ADD10322D9E53A009A02D2 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
