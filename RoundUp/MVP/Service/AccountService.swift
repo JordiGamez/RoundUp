@@ -26,16 +26,16 @@ extension AccountService: AccountServiceProtocol {
     
     /// Get an account holder's bank accounts
     ///
-    /// - Parameters:
-    ///   - callBack: CustomerAccounts
-    func getAccountInformation(callBack: (CustomerAccounts?) -> Void) {
+    /// - Returns: CustomerAccounts
+    /// - Throws: APIException
+    func getAccountInformation() throws -> CustomerAccounts {
         do {
             if let result = try apiClient?.loadCustomerInformation() {
-                callBack(result)
+                return result
             }
-            callBack(nil)
-        } catch {
-            callBack(nil)
+            throw APIException.unknownException
+        } catch let exception {
+            throw exception
         }
     }
     
@@ -44,53 +44,52 @@ extension AccountService: AccountServiceProtocol {
     /// - Parameters:
     ///   - accountId: account id
     ///   - categoryId: category id
-    ///   - callBack: TransactionItems
+    /// - Returns: TransactionItems
+    /// - Throws: APIException
     func getTransactions(accountId: String,
-                         categoryId: String,
-                         callBack: (TransactionItems?) -> Void) {
+                         categoryId: String) throws -> TransactionItems {
         do {
-            if let result = try apiClient?.loadAccountTransactions(
-                accountId: accountId, categoryId: categoryId) {
-                callBack(result)
+            if let result = try apiClient?.loadAccountTransactions(accountId: accountId, categoryId: categoryId) {
+                return result
             }
-            callBack(nil)
-        } catch {
-            callBack(nil)
+            throw APIException.unknownException
+        } catch let exception {
+            throw exception
         }
     }
     
     /// Create a savings goal
     ///
-    /// - Parameters:
-    ///   - accountId: account id
-    ///   - callBack: SavingsGoal
-    func setSavingsGoal(accountId: String, callBack: (SavingsGoal?) -> Void) {
+    /// - Parameter accountId: account id
+    /// - Returns: SavingsGoal
+    /// - Throws: APIException
+    func setSavingsGoal(accountId: String) throws -> SavingsGoal {
         do {
             if let result = try apiClient?.createSavingsGoal(accountId: accountId) {
-                callBack(result)
+                return result
             }
-            callBack(nil)
-        } catch {
-            callBack(nil)
+            throw APIException.unknownException
+        } catch let exception {
+            throw exception
         }
     }
     
-    /// Add money into a savings goal
+    /// Add money into a savings goa
     ///
     /// - Parameters:
     ///   - accountId: account id
     ///   - savingsGoalId: savings goal id
     ///   - money: money value
-    ///   - callBack: Transfer
-    func setTransferMoneyToSavingsGoal(accountId: String, savingsGoalId: String, money: CGFloat, callBack: (Transfer?) -> Void) {
+    /// - Returns: Transfer
+    /// - Throws: APIException
+    func setTransferMoneyToSavingsGoal(accountId: String, savingsGoalId: String, money: CGFloat) throws -> Transfer {
         do {
-            if let result = try apiClient?.transferMoneyToSavingsGoal(
-                accountId: accountId, savingsGoalId: savingsGoalId, money: money) {
-                callBack(result)
+            if let result = try apiClient?.transferMoneyToSavingsGoal(accountId: accountId, savingsGoalId: savingsGoalId, money: money) {
+                return result
             }
-            callBack(nil)
-        } catch {
-            callBack(nil)
+            throw APIException.unknownException
+        } catch let exception {
+            throw exception
         }
     }
 }

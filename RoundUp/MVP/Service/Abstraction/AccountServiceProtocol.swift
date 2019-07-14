@@ -13,26 +13,26 @@ protocol AccountServiceProtocol {
     
     /// Get an account holder's bank accounts
     ///
-    /// - Parameters:
-    ///   - callBack: CustomerAccounts
-    func getAccountInformation(callBack: (CustomerAccounts?) -> Void)
+    /// - Returns: CustomerAccounts
+    /// - Throws: APIException
+    func getAccountInformation() throws -> CustomerAccounts
     
     /// Gets the account holder's feed items which were created between two timestamps
     ///
     /// - Parameters:
     ///   - accountId: account id
     ///   - categoryId: category id
-    ///   - callBack: TransactionItems
+    /// - Returns: TransactionItems
+    /// - Throws: APIException
     func getTransactions(accountId: String,
-                         categoryId: String,
-                         callBack: (TransactionItems?) -> Void)
+                         categoryId: String) throws -> TransactionItems
     
     /// Create a savings goal
     ///
-    /// - Parameters:
-    ///   - accountId: account id
-    ///   - callBack: SavingsGoal
-    func setSavingsGoal(accountId: String, callBack: (SavingsGoal?) -> Void)
+    /// - Parameter accountId: account id
+    /// - Returns: SavingsGoal
+    /// - Throws: APIException
+    func setSavingsGoal(accountId: String) throws -> SavingsGoal
     
     /// Add money into a savings goa
     ///
@@ -40,6 +40,7 @@ protocol AccountServiceProtocol {
     ///   - accountId: account id
     ///   - savingsGoalId: savings goal id
     ///   - money: money value
-    ///   - callBack: Transfer
-    func setTransferMoneyToSavingsGoal(accountId: String, savingsGoalId: String, money: CGFloat, callBack: (Transfer?) -> Void)
+    /// - Returns: Transfer
+    /// - Throws: APIException
+    func setTransferMoneyToSavingsGoal(accountId: String, savingsGoalId: String, money: CGFloat) throws -> Transfer
 }

@@ -20,6 +20,7 @@ class RoundUpViewController: BaseViewController {
     }
     @IBOutlet weak var totalSavingsValueLabel: UILabel! {
         didSet {
+            totalSavingsValueLabel.isHidden = true
             totalSavingsValueLabel.text = "£0"
         }
     }
@@ -41,14 +42,11 @@ class RoundUpViewController: BaseViewController {
         }
     }
     
-    // MARK: Private variables
-    
-    private var totalSavedAmount: CGFloat = 0
-    
     // MARK: Public variables
     
     var presenter: RoundUpPresenterProtocol? =
         RoundUpPresenter(accountService: AccountService(apiClient: ApiClient()))
+    var totalSavedAmount: CGFloat = 0
     
     // MARK: Lifecycle
     
@@ -88,6 +86,7 @@ extension RoundUpViewController: RoundUpViewControllerProtocol {
     func displayTotalSavedAmount(value: CGFloat) {
         totalSavedAmount = value
         totalSavingsValueLabel.text = "£" + value.description
+        totalSavingsValueLabel.isHidden = false
     }
     
     /// Display transfer successfully made

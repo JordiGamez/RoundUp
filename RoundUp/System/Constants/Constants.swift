@@ -28,7 +28,7 @@ enum Constants {
         enum Header {
             
             enum Token {
-                static let token = "znGmAU4tuL3L77dbzFUyyua5vC459uPitp8tsBysWlhMYsgPNSLr7Fx1sALrpArk"
+                static let token = "cuE0mcsGGRMs0SdgyMmKP3eJ3CZVPJ87owDvJVpjgTRy9MX9tLy8YCR27lC6oqyd"
             }
             
             enum UserAgent {

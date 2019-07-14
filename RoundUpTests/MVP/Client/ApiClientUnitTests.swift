@@ -9,8 +9,7 @@
 import UIKit
 import Quick
 import Nimble
-import Swinject
-@testable import CreditScore
+@testable import RoundUp
 
 /// ApiClient unit tests
 class ApiClientUnitTests: QuickSpec {
@@ -19,10 +18,6 @@ class ApiClientUnitTests: QuickSpec {
     
     override func spec() {
         
-        // MARK: Constants
-        
-        let container = Container()
-        
         // MARK: Variables
         
         var apiClient: ApiClient?
@@ -30,18 +25,63 @@ class ApiClientUnitTests: QuickSpec {
         // MARK: Tests
         
         beforeEach {
-            container.register(ApiClient.self) { resolver in
-                return ApiClient()
-            }
-            
-            apiClient = container.resolve(ApiClient.self)
+            apiClient = ApiClient()
         }
-        describe("when executing the api client loadCreditValues method") {
+        describe("when executing the api client loadCustomerInformation method") {
             context("given a valid response from base client") {
                 beforeEach {
-                    do { _ = try apiClient?.loadCreditValues() } catch {}
+                    do { _ = try apiClient?.loadCustomerInformation() } catch {}
                 }
+                it("") {}
             }
         }
+        describe("when executing the api client loadAccountTransactions method") {
+            context("given a valid response from base client") {
+                beforeEach {
+                    do { _ = try apiClient?.loadAccountTransactions(accountId: "e29b4464-8d1c-4345-862b-c8f6f2ea8f27", categoryId: "4b9b028f-04db-4229-9fbe-6e1a9425cf34") } catch {}
+                }
+                it("") {}
+            }
+        }
+//        describe("when executing the api client loadAccountTransactions method") {
+//            context("given an invalid response from base client") {
+//                beforeEach {
+//                    do { _ = try apiClient?.loadAccountTransactions(accountId: "1", categoryId: "1") } catch {}
+//                }
+//                it("") {}
+//            }
+//        }
+        describe("when executing the api client createSavingsGoal method") {
+            context("given a valid response from base client") {
+                beforeEach {
+                    do { _ = try apiClient?.createSavingsGoal(accountId: "e29b4464-8d1c-4345-862b-c8f6f2ea8f27") } catch {}
+                }
+                it("") {}
+            }
+        }
+//        describe("when executing the api client createSavingsGoal method") {
+//            context("given an invalid response from base client") {
+//                beforeEach {
+//                    do { _ = try apiClient?.createSavingsGoal(accountId: "1") } catch {}
+//                }
+//                it("") {}
+//            }
+//        }
+        describe("when executing the api client transferMoneyToSavingsGoal method") {
+            context("given a valid response from base client") {
+                beforeEach {
+                    do { _ = try apiClient?.transferMoneyToSavingsGoal(accountId: "e29b4464-8d1c-4345-862b-c8f6f2ea8f27", savingsGoalId: "c0050be7-06d1-40d3-8113-014b6953658c", money: 1000) } catch {}
+                }
+                it("") {}
+            }
+        }
+//        describe("when executing the api client transferMoneyToSavingsGoal method") {
+//            context("given a valid response from base client") {
+//                beforeEach {
+//                    do { _ = try apiClient?.transferMoneyToSavingsGoal(accountId: "1", savingsGoalId: "1", money: 1000) } catch {}
+//                }
+//                it("") {}
+//            }
+//        }
     }
 }

@@ -51,9 +51,6 @@ class BaseClient {
                     throw exception
                 }
             } else {
-                if let data = response.data {
-                    print(String(data: data, encoding: String.Encoding.utf8) ?? "")
-                }
                 throw APIException.connectivityException
             }
         }
