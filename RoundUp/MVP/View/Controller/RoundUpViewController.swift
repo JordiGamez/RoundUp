@@ -15,7 +15,7 @@ class RoundUpViewController: BaseViewController {
     
     @IBOutlet weak var totalSavingsLabel: UILabel! {
         didSet {
-            totalSavingsLabel.text = "Your current weekly savings are"
+            totalSavingsLabel.text = "roundUp_currentWeeklySavings".localize()
         }
     }
     @IBOutlet weak var totalSavingsValueLabel: UILabel! {
@@ -27,7 +27,7 @@ class RoundUpViewController: BaseViewController {
     @IBOutlet weak var transferSavingsButton: UIButton! {
         didSet {
             transferSavingsButton.backgroundColor = UIColor(red: 110/255, green: 47/255, blue: 212/255, alpha: 1.0)
-            transferSavingsButton.setTitle("Transfer money", for: .normal)
+            transferSavingsButton.setTitle("roundUp_transferMoney".localize(), for: .normal)
             transferSavingsButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
             transferSavingsButton.layer.cornerRadius = 6
             transferSavingsButton.tintColor = .white
@@ -36,9 +36,29 @@ class RoundUpViewController: BaseViewController {
                                             for: .touchUpInside)
         }
     }
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView! {
+        didSet {
+            activityIndicatorView.isHidden = true
+            activityIndicatorView.hidesWhenStopped = true
+            activityIndicatorView.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+        }
+    }
     @IBOutlet weak var transferDoneLabel: UILabel! {
         didSet {
             transferDoneLabel.isHidden = true
+        }
+    }
+    @IBOutlet weak var retryButton: UIButton! {
+        didSet {
+            retryButton.isHidden = true
+            retryButton.backgroundColor = .black
+            retryButton.setTitle("tryAgain".localize(), for: .normal)
+            retryButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
+            retryButton.layer.cornerRadius = 6
+            retryButton.tintColor = .white
+            retryButton.addTarget(self,
+                                  action: #selector(retryTransferSavings),
+                                  for: .touchUpInside)
         }
     }
     
@@ -67,6 +87,19 @@ class RoundUpViewController: BaseViewController {
     
     /// Detect when transfer savings buttong is tapped
     @objc private func transferSavings() {
+        transferSavingsButton.isHidden = true
+        activityIndicatorView.isHidden = false
+        activityIndicatorView.startAnimating()
+        presenter?.transferSavings(amount: totalSavedAmount)
+    }
+    
+    /// Detect when retry transfer savings buttong is tapped
+    @objc private func retryTransferSavings() {
+        retryButton.isHidden = true
+        transferDoneLabel.isHidden = true
+        transferDoneLabel.text = ""
+        activityIndicatorView.isHidden = false
+        activityIndicatorView.startAnimating()
         presenter?.transferSavings(amount: totalSavedAmount)
     }
 }
@@ -91,14 +124,17 @@ extension RoundUpViewController: RoundUpViewControllerProtocol {
     
     /// Display transfer successfully made
     func displayTranferSuccessfullyMade() {
-        transferSavingsButton.isHidden = true
-        transferDoneLabel.text = "Transfer complete"
+        activityIndicatorView.isHidden = true
+        transferDoneLabel.text = "roundUp_transferComplete".localize()
         transferDoneLabel.isHidden = false
         totalSavingsValueLabel.text = "£0"
     }
     
     /// Show error
     func showError() {
-        // Implement
+        activityIndicatorView.isHidden = true
+        transferDoneLabel.text = "genericError".localize()
+        transferDoneLabel.isHidden = false
+        retryButton.isHidden = false
     }
 }

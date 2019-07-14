@@ -12,6 +12,8 @@
 		C645647F22DB2A7300852688 /* AccountServiceUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C645647E22DB2A7300852688 /* AccountServiceUnitTests.swift */; };
 		C645648222DB325500852688 /* RoundUpPresenterUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C645648122DB325500852688 /* RoundUpPresenterUnitTests.swift */; };
 		C645648522DB364500852688 /* RoundUpViewControllerUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C645648422DB364500852688 /* RoundUpViewControllerUnitTests.swift */; };
+		C645648822DB407B00852688 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C645648722DB407B00852688 /* Localizable.strings */; };
+		C645648A22DB40BF00852688 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C645648922DB40BF00852688 /* StringExtensions.swift */; };
 		C6ADD0D522D9E2C0009A02D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ADD0D422D9E2C0009A02D2 /* AppDelegate.swift */; };
 		C6ADD0DC22D9E2C1009A02D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6ADD0DB22D9E2C1009A02D2 /* Assets.xcassets */; };
 		C6ADD0DF22D9E2C1009A02D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6ADD0DD22D9E2C1009A02D2 /* LaunchScreen.storyboard */; };
@@ -67,6 +69,8 @@
 		C645647E22DB2A7300852688 /* AccountServiceUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServiceUnitTests.swift; sourceTree = "<group>"; };
 		C645648122DB325500852688 /* RoundUpPresenterUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUpPresenterUnitTests.swift; sourceTree = "<group>"; };
 		C645648422DB364500852688 /* RoundUpViewControllerUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUpViewControllerUnitTests.swift; sourceTree = "<group>"; };
+		C645648722DB407B00852688 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		C645648922DB40BF00852688 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		C6ADD0D122D9E2C0009A02D2 /* RoundUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoundUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6ADD0D422D9E2C0009A02D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6ADD0DB22D9E2C1009A02D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -176,6 +180,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C645648622DB406A00852688 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				C645648722DB407B00852688 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		C6ADD0C822D9E2C0009A02D2 = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +232,7 @@
 			children = (
 				C6ADD0F522D9E2EF009A02D2 /* AppDelegate */,
 				C6ADD14522DA2897009A02D2 /* Extensions */,
+				C645648622DB406A00852688 /* Localization */,
 				C6ADD13222D9FB7D009A02D2 /* Global */,
 				C6ADD12F22D9F9E9009A02D2 /* Constants */,
 				C6ADD0F722D9E307009A02D2 /* UI */,
@@ -416,6 +429,7 @@
 			isa = PBXGroup;
 			children = (
 				C6ADD14622DA28AF009A02D2 /* CGFloatExtensions.swift */,
+				C645648922DB40BF00852688 /* StringExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -518,6 +532,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6ADD0DF22D9E2C1009A02D2 /* LaunchScreen.storyboard in Resources */,
+				C645648822DB407B00852688 /* Localizable.strings in Resources */,
 				C6ADD10122D9E520009A02D2 /* RoundUpViewController.xib in Resources */,
 				C6ADD0DC22D9E2C1009A02D2 /* Assets.xcassets in Resources */,
 			);
@@ -646,6 +661,7 @@
 				C6ADD14222DA1ED3009A02D2 /* SourceAmount.swift in Sources */,
 				C6ADD0FD22D9E4B5009A02D2 /* RoundUpViewController.swift in Sources */,
 				C6ADD13922D9FBC8009A02D2 /* ApiClientProtocol.swift in Sources */,
+				C645648A22DB40BF00852688 /* StringExtensions.swift in Sources */,
 				C6ADD13122D9F9FC009A02D2 /* Constants.swift in Sources */,
 				C6ADD0D522D9E2C0009A02D2 /* AppDelegate.swift in Sources */,
 				C6ADD14022DA1EC0009A02D2 /* Transaction.swift in Sources */,

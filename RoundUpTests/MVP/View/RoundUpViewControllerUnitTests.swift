@@ -117,8 +117,8 @@ class RoundUpViewControllerUnitTests: QuickSpec {
                     viewController?.loadView()
                     viewController?.displayTranferSuccessfullyMade()
                 }
-                it("should set the transferSavingsButton isHidden to true") {
-                    expect(viewController?.transferSavingsButton.isHidden).to(beTrue())
+                it("should set the activityIndicatorView isHidden to true") {
+                    expect(viewController?.activityIndicatorView.isHidden).to(beTrue())
                 }
                 it("should set the transferDoneLabel text value to Transfer complete") {
                     expect(viewController?.transferDoneLabel.text).to(equal("Transfer complete"))
@@ -137,7 +137,18 @@ class RoundUpViewControllerUnitTests: QuickSpec {
                     viewController?.loadView()
                     viewController?.showError()
                 }
-                it("should do nothing") {}
+                it("should set the activityIndicatorView isHidden to true") {
+                    expect(viewController?.activityIndicatorView.isHidden).to(beTrue())
+                }
+                it("should set the transferDoneLabel text value to Transfer complete") {
+                    expect(viewController?.transferDoneLabel.text).to(equal("There was an error loading the data"))
+                }
+                it("should set the transferDoneLabel isHidden to false") {
+                    expect(viewController?.transferDoneLabel.isHidden).to(beFalse())
+                }
+                it("should set the retryButton isHidden to false") {
+                    expect(viewController?.retryButton.isHidden).to(beFalse())
+                }
             }
         }
         describe("when transferSavingsButton is called using .touchUpInside") {
@@ -147,6 +158,43 @@ class RoundUpViewControllerUnitTests: QuickSpec {
                     viewController?.viewDidLoad()
                     viewController?.loadView()
                     viewController?.transferSavingsButton.sendActions(for: .touchUpInside)
+                }
+                it("should set the transferSavingsButton isHidden to true") {
+                    expect(viewController?.transferSavingsButton.isHidden).to(beTrue())
+                }
+                it("should set the activityIndicatorView isHidden to false") {
+                    expect(viewController?.activityIndicatorView.isHidden).to(beFalse())
+                }
+                it("should set the activityIndicatorView isAnimating to true") {
+                    expect(viewController?.activityIndicatorView.isAnimating).to(beTrue())
+                }
+                it("should call the presenter transferSavingsIsCalled method") {
+                    expect(presenter?.transferSavingsIsCalled).to(beTrue())
+                }
+            }
+        }
+        describe("when transferSavingsButton is called using .touchUpInside") {
+            context("given a valid protocol conformance") {
+                beforeEach {
+                    viewController?.presenter = presenter
+                    viewController?.viewDidLoad()
+                    viewController?.loadView()
+                    viewController?.retryButton.sendActions(for: .touchUpInside)
+                }
+                it("should set the retryButton isHidden to true") {
+                    expect(viewController?.retryButton.isHidden).to(beTrue())
+                }
+                it("should set the transferDoneLabel isHidden to true") {
+                    expect(viewController?.transferDoneLabel.isHidden).to(beTrue())
+                }
+                it("should set the transferDoneLabel text value to empty") {
+                    expect(viewController?.transferDoneLabel.text).to(equal(""))
+                }
+                it("should set the activityIndicatorView isHidden to false") {
+                    expect(viewController?.activityIndicatorView.isHidden).to(beFalse())
+                }
+                it("should set the activityIndicatorView isAnimating to true") {
+                    expect(viewController?.activityIndicatorView.isAnimating).to(beTrue())
                 }
                 it("should call the presenter transferSavingsIsCalled method") {
                     expect(presenter?.transferSavingsIsCalled).to(beTrue())

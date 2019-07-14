@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RoundUpViewController" customModule="RoundUp" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicatorView" destination="Gnb-8T-ETx" id="btt-Md-fGg"/>
+                <outlet property="retryButton" destination="zkk-Fu-Tar" id="zvZ-vI-2Uc"/>
                 <outlet property="totalSavingsLabel" destination="EZ3-tv-6uc" id="mAW-M7-aTu"/>
                 <outlet property="totalSavingsValueLabel" destination="BJm-cw-OUJ" id="n44-rF-ddr"/>
                 <outlet property="transferDoneLabel" destination="DTl-BR-dPE" id="625-aR-hnY"/>
@@ -44,18 +46,33 @@
                     </constraints>
                     <state key="normal" title="Button"/>
                 </button>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Gnb-8T-ETx">
+                    <rect key="frame" x="197" y="518.5" width="20" height="20"/>
+                </activityIndicatorView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTl-BR-dPE">
                     <rect key="frame" x="107" y="518.5" width="200" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkk-Fu-Tar">
+                    <rect key="frame" x="107" y="559" width="200" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="MeG-q6-CZE"/>
+                        <constraint firstAttribute="height" constant="45" id="rqf-a3-rIQ"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="Gnb-8T-ETx" firstAttribute="centerX" secondItem="tCu-Cl-EcV" secondAttribute="centerX" id="2uh-98-TyO"/>
                 <constraint firstItem="BJm-cw-OUJ" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="Ay5-ZW-bkI"/>
+                <constraint firstItem="zkk-Fu-Tar" firstAttribute="top" secondItem="DTl-BR-dPE" secondAttribute="bottom" constant="20" id="Fxu-hU-abP"/>
                 <constraint firstItem="tCu-Cl-EcV" firstAttribute="top" secondItem="BJm-cw-OUJ" secondAttribute="bottom" constant="20" id="G5z-dk-Ohc"/>
                 <constraint firstItem="DTl-BR-dPE" firstAttribute="centerY" secondItem="tCu-Cl-EcV" secondAttribute="centerY" id="I8W-gZ-WcH"/>
+                <constraint firstItem="zkk-Fu-Tar" firstAttribute="centerX" secondItem="tCu-Cl-EcV" secondAttribute="centerX" id="IZn-p0-0VJ"/>
+                <constraint firstItem="zkk-Fu-Tar" firstAttribute="width" secondItem="tCu-Cl-EcV" secondAttribute="width" id="PWf-9J-MgT"/>
                 <constraint firstItem="DTl-BR-dPE" firstAttribute="leading" secondItem="tCu-Cl-EcV" secondAttribute="leading" id="UyU-97-Pbq"/>
                 <constraint firstItem="EZ3-tv-6uc" firstAttribute="centerX" secondItem="BJm-cw-OUJ" secondAttribute="centerX" id="bwt-xd-DQ0"/>
                 <constraint firstItem="BJm-cw-OUJ" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="emj-AC-JXx"/>
@@ -63,6 +80,8 @@
                 <constraint firstItem="tCu-Cl-EcV" firstAttribute="centerX" secondItem="BJm-cw-OUJ" secondAttribute="centerX" id="mez-ga-jeh"/>
                 <constraint firstItem="DTl-BR-dPE" firstAttribute="centerX" secondItem="tCu-Cl-EcV" secondAttribute="centerX" id="ook-Iv-hZR"/>
                 <constraint firstItem="BJm-cw-OUJ" firstAttribute="top" secondItem="EZ3-tv-6uc" secondAttribute="bottom" constant="10" id="pFu-c9-auM"/>
+                <constraint firstItem="zkk-Fu-Tar" firstAttribute="height" secondItem="tCu-Cl-EcV" secondAttribute="height" id="qAp-lM-hAn"/>
+                <constraint firstItem="Gnb-8T-ETx" firstAttribute="centerY" secondItem="tCu-Cl-EcV" secondAttribute="centerY" id="vsB-dI-A5H"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>

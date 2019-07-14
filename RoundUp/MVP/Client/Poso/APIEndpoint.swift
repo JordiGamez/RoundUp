@@ -39,7 +39,7 @@ enum APIEndpoint {
         case .savingsGoals(let accountId):
             return "account/\(accountId)/savings-goals"
         case .transferMoneyToSavingsGoal(let accountId, let savingsGoalId, _):
-            return "account/\(accountId)/savings-goals/\(savingsGoalId)/add-money/\(UUID().uuidString)?"
+            return "account/\(accountId)/savings-goals/\(savingsGoalId)/add-money/\(UUID().uuidString)"
         }
     }
     

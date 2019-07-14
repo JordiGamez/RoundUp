@@ -1,0 +1,13 @@
+// MARK: General
+
+"tryAgain" = "Try again";
+
+// MARK: Round up screen
+
+"roundUp_transferMoney" = "Transfer money";
+"roundUp_currentWeeklySavings" = "Your current weekly savings are";
+"roundUp_transferComplete" = "Transfer complete";
+
+// MARK: Error
+
+"genericError" = "There was an error loading the data";
