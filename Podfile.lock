@@ -2,20 +2,28 @@ PODS:
   - Alamofire (4.8.2)
   - Alamofire-Synchronous (4.0.0):
     - Alamofire (~> 4.0)
+  - Nimble (8.0.2)
+  - Quick (2.1.0)
 
 DEPENDENCIES:
   - Alamofire
   - Alamofire-Synchronous
+  - Nimble
+  - Quick
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Alamofire-Synchronous
+    - Nimble
+    - Quick
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Alamofire-Synchronous: eedf1e6e961c3795a63c74990b3f7d9fbfac7e50
+  Nimble: 622629381bda1dd5678162f21f1368cec7cbba60
+  Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
 
-PODFILE CHECKSUM: 7c1c4f61a2ae78de2fe36bc90654dc1f9e64fab9
+PODFILE CHECKSUM: d28e17fe8406c8776e7a4c372b1f930178a3abac
 
 COCOAPODS: 1.6.1
